@@ -1,0 +1,33 @@
+{
+  "name": "array-object-transformer",
+  "version": "0.0.1",
+  "description": "Interconvert between an array of objects (ao) and an object of arrays (oa).",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "tsc",
+    "init_tsc_config": "tsc -init"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nwheatle/array-object-transformer.git"
+  },
+  "keywords": [
+    "array of objects",
+    "object of arrays"
+  ],
+  "author": "Nicole Wheatley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nwheatle/array-object-transformer.git/issues"
+  },
+  "homepage": "https://github.com/nwheatle/array-object-transformer.git#readme",
+  "devDependencies": {
+    "@types/node": "16.3.3",
+    "ts-node": "10.1.0",
+    "tslib": "2.3.0",
+    "typescript": "4.3.5"
+  },
+  "dependencies": {}
+}
