@@ -8,6 +8,4 @@ interface TheObjectOfArrays {
 
 type TheArrayOfObjects = AnyObject[];
 
-type nullValues = string[];
-
 export type { AnyObject, TheObjectOfArrays, TheArrayOfObjects };

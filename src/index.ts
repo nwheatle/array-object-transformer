@@ -13,12 +13,13 @@ type ArrayLengthType = ArrayLengthUnitType[];
 
 export function objectToArray(
   theObject: TheObjectOfArrays,
-  verbose: boolean = true
+  errorCheck: boolean = true
 ): TheArrayOfObjects {
+  //errorCheck = false to increase speed, but lose verbose error messages
   let theArray: TheArrayOfObjects = [];
   const keys = Object.keys(theObject);
   const nfRows = theObject[keys[0]].length;
-  if (verbose) assertEqualArrayLengths(theObject);
+  if (errorCheck) assertEqualArrayLengths(theObject);
   //throw errors
   for (let i = 0; i < nfRows; i++) {
     theArray.push({});
@@ -31,10 +32,11 @@ export function objectToArray(
 
 export function arrayToObject(
   theArray: TheArrayOfObjects,
-  verbose: boolean = true
+  errorCheck: boolean = true
 ): TheObjectOfArrays {
+  //errorCheck = false to increase speed, but lose verbose error messages
   let theObject: TheObjectOfArrays = {};
-  if (verbose) assertIdenticalKeys(theArray);
+  if (errorCheck) assertIdenticalKeys(theArray);
   const keys = Object.keys(theArray[0]);
   keys.forEach((key) => {
     theObject[key] = theArray.map((obj) => obj[key]);
