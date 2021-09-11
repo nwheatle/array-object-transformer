@@ -1,11 +1,11 @@
-interface AnyObject {
+interface AnyObjectType {
   [key: string]: any;
 }
 
-interface TheObjectOfArrays {
+interface ObjectOfArraysType {
   [key: string]: any[];
 }
 
-type TheArrayOfObjects = AnyObject[];
+type ArrayOfObjectsType = AnyObjectType[];
 
-export type { AnyObject, TheObjectOfArrays, TheArrayOfObjects };
+export type { ObjectOfArraysType, ArrayOfObjectsType };

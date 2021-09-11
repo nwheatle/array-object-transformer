@@ -3,6 +3,7 @@
 ## :star2: Convert object of arrays into an array of objects and vice versa:star2:
 
 Two useful functions for data wrangling in javascript- allows for easy transformation between row-wise (array of objects) and column-wise (object of arrays) dataset structure.
+lGruYxfgh6MpyWYLv7RypQghcuQ=
 
 ## Install
 

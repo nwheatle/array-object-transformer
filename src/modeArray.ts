@@ -1,7 +1,7 @@
 interface modeMapType {
   [key: string]: number;
 }
-
+//https://stackoverflow.com/questions/1187518/how-to-get-the-difference-between-two-arrays-in-javascript
 function modeArray(array: any[]): any[] {
   if (array.length == 0) return [];
   var modeMap: modeMapType = {},

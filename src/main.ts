@@ -1,4 +1,4 @@
-import type { TheObjectOfArrays, TheArrayOfObjects } from "./types";
+import type { ObjectOfArraysType, ArrayOfObjectsType } from "./types";
 import modeArray from "./modeArray";
 
 interface MessageType {
@@ -12,11 +12,11 @@ type ArrayLengthUnitType = [string, number];
 type ArrayLengthType = ArrayLengthUnitType[];
 
 export function objectToArray(
-  theObject: TheObjectOfArrays,
+  theObject: ObjectOfArraysType,
   errorCheck: boolean = true
-): TheArrayOfObjects {
+): ArrayOfObjectsType {
   //errorCheck = false to increase speed, but lose verbose error messages
-  let theArray: TheArrayOfObjects = [];
+  let theArray: ArrayOfObjectsType = [];
   const keys = Object.keys(theObject);
   const nfRows = theObject[keys[0]].length;
   if (errorCheck) assertEqualArrayLengths(theObject);
@@ -31,11 +31,11 @@ export function objectToArray(
 }
 
 export function arrayToObject(
-  theArray: TheArrayOfObjects,
+  theArray: ArrayOfObjectsType,
   errorCheck: boolean = true
-): TheObjectOfArrays {
+): ObjectOfArraysType {
   //errorCheck = false to increase speed, but lose verbose error messages
-  let theObject: TheObjectOfArrays = {};
+  let theObject: ObjectOfArraysType = {};
   if (errorCheck) assertIdenticalKeys(theArray);
   const keys = Object.keys(theArray[0]);
   keys.forEach((key) => {
@@ -45,7 +45,7 @@ export function arrayToObject(
 }
 
 //helper functions
-function assertIdenticalKeys(theArray: TheArrayOfObjects): void {
+function assertIdenticalKeys(theArray: ArrayOfObjectsType): void {
   const referenceKeys = Object.keys(theArray[0]);
   const sortedReferenceKeysString = referenceKeys.sort().join(", ");
   const showMaxErrors = 10;
@@ -85,7 +85,7 @@ function assertIdenticalKeys(theArray: TheArrayOfObjects): void {
   }
 }
 
-function assertEqualArrayLengths(theObject: TheObjectOfArrays): void {
+function assertEqualArrayLengths(theObject: ObjectOfArraysType): void {
   //create error message to tell user which keys have unexpected array lengths
   const keys = Object.keys(theObject);
   let arrayLengths: ArrayLengthType = keys.map((key) => [

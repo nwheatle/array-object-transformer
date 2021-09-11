@@ -1,13 +1,14 @@
 {
   "name": "array-object-transformer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Interconvert between an array of objects and object of arrays.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "tsc",
-    "init_tsc_config": "tsc -init"
+    "init_tsc_config": "tsc -init",
+    "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
