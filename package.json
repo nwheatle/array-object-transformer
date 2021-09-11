@@ -1,7 +1,7 @@
 {
   "name": "array-object-transformer",
   "version": "0.0.1",
-  "description": "Interconvert between an array of objects (ao) and an object of arrays (oa).",
+  "description": "Interconvert between an array of objects and object of arrays.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -15,7 +15,9 @@
   },
   "keywords": [
     "array of objects",
-    "object of arrays"
+    "object of arrays",
+    "convert object to array",
+    "convert array to object"
   ],
   "author": "Nicole Wheatley",
   "license": "MIT",
