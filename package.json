@@ -1,6 +1,6 @@
 {
   "name": "array-object-transformer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Interconvert between an array of objects and object of arrays.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
